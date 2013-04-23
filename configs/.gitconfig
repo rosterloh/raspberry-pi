@@ -1,0 +1,20 @@
+[user]
+	name = Richard Osterloh
+	email = richard.osterloh@gmail.com
+[color]
+    ui = auto
+[core]
+    editor = /bin/nano
+[alias]
+    com = commit
+    sta = status
+    sw2 = checkout
+    nbr = checkout -b
+    vhi = log --graph --pretty=format:'%Cred%h%Creset -%C(Yellow)%d%Creset%s%Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    vbr = branch -a
+    vre = remote -v
+    mer = merge --no-ff
+    mef = merge --ff-only
+    dif = diff --staged
+[github]
+	user = pi

@@ -1,0 +1,7 @@
+#!/bin/sh
+#/etc/cron.hourly/current_weather
+TODAY=`date +"%A, %e %B %Y, %R"`
+TEMP=`curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|READING|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`
+
+echo $TEMP > /home/pi/weather_reading
+echo $TODAY > /home/pi/weather_date

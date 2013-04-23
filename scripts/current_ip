@@ -1,0 +1,5 @@
+#!/bin/sh
+# /etc/cron.daily/current_ip
+IP_WEWN=`/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1`
+IP_ZEWN=`wget -q -O - http://icanhazip.com/ | tail`
+echo $IP_WEWN and $IP_ZEWN > /home/pi/ip 
